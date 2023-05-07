@@ -3,34 +3,38 @@
 @{
     ViewData["Title"] = "Home page";
 }
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" style="background-color:cadetblue; border:none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Sırala
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Artan Fiyata Göre</a>        
-        <a class="dropdown-item" href="#">Azalan Fiyata Göre</a>
 
-    </div>
-</div>
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" style="background-color:cadetblue; border:none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Kategoriler
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Edebiyat Kitapları</a>
-        <a class="dropdown-item" href="#">Şiir Kitapları</a>
-        <a class="dropdown-item" href="#">Felsefe Kitapları</a>
-        <a class="dropdown-item" href="#">Çocuk Kitapları</a>
 
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" style="background-color: white; border: none; color: black;float:left;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sırala
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item"  onclick="sortByPrice(1);">Artan Fiyata Göre</a>
+            <a class="dropdown-item" onclick="sortByPrice(0);">Azalan Fiyata Göre</a>
+
+        </div>
     </div>
-</div>
+   
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" style="background-color: white; border: none; color: black; float: right;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Kategoriler
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Edebiyat Kitapları</a>
+            <a class="dropdown-item" href="#">Şiir Kitapları</a>
+            <a class="dropdown-item" href="#">Felsefe Kitapları</a>
+            <a class="dropdown-item" href="#">Çocuk Kitapları</a>
+
+        </div>
+    </div>
+
 <div class="list-item">
     <div class="container">
         <div class="card" style="width: 17rem;">
             <img src="~/img/img1.png" class="card-img-top" alt="Kraliçeyi Kurtarmak">
             <div class="card-body">
-                <h5 class="card-title">Kraliçeyi Kurtarmak</h5>
+                <h5 class="name">Kraliçeyi Kurtarmak</h5>
                 <p class="card-text">
                     Bir kraliçeyi, kapatıldığı zindandan matematiktle kurtarmak mümkün mü dersiniz?
                     Aleks, yolda bulduğu tuhaf kalemin en zor matematik problemlerini bile çözüverdiğini fark edince çok sevindi.
@@ -45,15 +49,15 @@
                 <li class="list-group-item"><b>Yazar:</b> Vladimir Tumanov</li>
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺40,10 </a>
-                <a href="#" class="card-link">Sepete ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺40,10 </a>
+                <a href="/Sepet" class="card-link">Sepete ekle</a>
             </div>
         </div>
         <span><br /></span>
         <div class="card" style="width: 17rem;">
             <img src="~/img/img2.png" class="card-img-top" alt="Simyacı">
             <div class="card-body">
-                <h5 class="card-title">Simyacı</h5>
+                <h5 class="name">Simyacı</h5>
                 <p class="card-text">
                     Simyacı, Brezilyalı eski şarkı sözü yazarı Paulo Coelho'nun, yayınlandığı 1988 yılından bu yana dünyayı birbirine katan,
                     eleştirmenler tarafından bir `fenomen' olarak değerlendirilen üçüncü romanı.Yüreğinde, çocukluğunu yitirmemiş olan okurlar için bir `klasik'
@@ -68,15 +72,15 @@
 
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺9,90 </a>
-                <a href="#" class="card-link">Sepete ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺9,90 </a>
+                <a href="/Sepet" class="card-link">Sepete ekle</a>
             </div>
         </div>
         <span><br /></span>
         <div class="card" style="width: 17rem;">
             <img src="~/img/img3.png" class="card-img-top" alt="Momo">
             <div class="card-body">
-                <h5 class="card-title">Momo</h5>
+                <h5 class="name">Momo</h5>
                 <p class="card-text">
                     Momo, büyük bir kentin tiyatro harabelerinde yaşayan küçük bir kızdır. Buldukları ya da kendisine hediye edilenler dışında hiçbir şeyi yoktur.
                     Ancak olağanüstü bir yeteneği vardır:
@@ -90,14 +94,14 @@
                 <li class="list-group-item"><b>Yazar:</b> Michael Ende</li>
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺9,90 </a>
-                <a href="#" class="card-link">Sepete Ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺9,90 </a>
+                <a href="/Sepet" class="card-link">Sepete Ekle</a>
             </div>
         </div>
         <div class="card" style="width: 17rem;">
             <img src="~/img/img4.png" class="card-img-top" alt="Kırmızı Pazartesi">
             <div class="card-body">
-                <h5 class="card-title">Kırmızı Pazartesi</h5>
+                <h5 class="name">Kırmızı Pazartesi</h5>
                 <p class="card-text">
                     Kırmızı Pazartesi, işleneceğini herkesin bildiği, engel olmak için kimsenin bir şey yapmadığı bir namus cinayetinin öyküsü.
                     Hem Kolombiya’da, hem de yayımlandığı dünyanın dört bir yanındaki pek çok ülkede sarsıcı etkileri olmuş bir roman. Usta yazar, çocukluğunu geçirdiği
@@ -111,8 +115,8 @@
                 <li class="list-group-item"><b>Yazar:</b> Gabriel Garcia Marquez </li>
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺9,90 </a>
-                <a href="#" class="card-link">Sepete Ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺9,90 </a>
+                <a href="/Sepet" class="card-link">Sepete Ekle</a>
             </div>
         </div>
 
@@ -122,62 +126,68 @@
         <div class="card" style="width: 17rem;">
             <img src="~/img/img5.png" class="card-img-top" alt="Soneler">
             <div class="card-body">
-                <h5 class="card-title">Soneler</h5>
-                <p class="card-text">Dört yüz yıldan uzun süredir insan ruhunun derinliklerine dokunmaya devam eden William Shakespeare daha çok oyunlarıyla biliniyor.
-                Bununla birlikte ilk kez 1609 yılında toplu halde basılan Soneler’i, İngilizcenin gelmiş geçmiş hâlâ en önemli ve ünlü şiirleri olarak kabul ediliyor.</p>
+                <h5 class="name">Soneler</h5>
+                <p class="card-text">
+                    Dört yüz yıldan uzun süredir insan ruhunun derinliklerine dokunmaya devam eden William Shakespeare daha çok oyunlarıyla biliniyor.
+                    Bununla birlikte ilk kez 1609 yılında toplu halde basılan Soneler’i, İngilizcenin gelmiş geçmiş hâlâ en önemli ve ünlü şiirleri olarak kabul ediliyor.
+                </p>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><b>Yazar:</b> William Shakespeare </li>
 
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺19,58 </a>
-                <a href="#" class="card-link">Sepete Ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺19,58 </a>
+                <a href="/Sepet" class="card-link">Sepete Ekle</a>
             </div>
         </div>
         <span><br /></span>
         <div class="card" style="width: 17rem;">
             <img src="~/img/img6.png" class="card-img-top" alt="Rubailer">
             <div class="card-body">
-                <h5 class="card-title">Rubailer</h5>
-                <p class="card-text">Ömer Hayyam rubailerinin Türkçe çevirileri pek çoktur. Elinizdeki kitapta yer alan rubai çevirileri Hayyam’a
-                Türkçede yeni bir soluk verme amacıyla girişilmiş mütevazı bir çabanın oldukça başarılı bir mahsulüdür. Mehmet Şayir; on birli hece ölçüsüyle, 
-                şiirlerin Farsça aslındaki şekillerine yakın redif ve kafiyeler kullanarak,
-                derin felsefi görüşleri de kolay anlaşılır bir şekilde rubaileri Türkçeye aktarmıştır.</p>
+                <h5 class="name">Rubailer</h5>
+                <p class="card-text">
+                    Ömer Hayyam rubailerinin Türkçe çevirileri pek çoktur. Elinizdeki kitapta yer alan rubai çevirileri Hayyam’a
+                    Türkçede yeni bir soluk verme amacıyla girişilmiş mütevazı bir çabanın oldukça başarılı bir mahsulüdür. Mehmet Şayir; on birli hece ölçüsüyle,
+                    şiirlerin Farsça aslındaki şekillerine yakın redif ve kafiyeler kullanarak,
+                    derin felsefi görüşleri de kolay anlaşılır bir şekilde rubaileri Türkçeye aktarmıştır.
+                </p>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><b>Yazar:</b> Ömer Hayyam</li>
 
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺39,45 </a>
-                <a href="#" class="card-link">Sepete Ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺39,45 </a>
+                <a href="/Sepet" class="card-link">Sepete Ekle</a>
             </div>
         </div>
         <span><br /></span>
         <div class="card" style="width: 17rem;">
             <img src="~/img/img7.png" class="card-img-top" alt="İlahi Komedya-Cennet">
             <div class="card-body">
-                <h5 class="card-title">İlahi Komedya-Cennet </h5>
-                <p class="card-text">Dünya edebiyatının en büyük başyapıtlarından biri olan İlahi Komedya üç bölümden oluşur: Cehennem, Araf ve Cennet. Dante Alighieri, 
-                hiçbir zaman sevgili Floransa’sına dönemediği o meşum sürgün yıllarında yazdığı ve öteki dünyaya yaptığı düşsel geziyi anlattığı bu eserinde genç yaşında 
-                kaybettiği biricik aşkı Beatrice’sini ararken, bir yandan tanrısal düzenin gizlerini, bir yandan da antik çağların ezoterik sırlarını çözmeye çalışır.
-                Elinizdeki kitap, Dante’nin Cennet’e yaptığı yolculuğun öyküsüdür.</p>
+                <h5 class="name">İlahi Komedya-Cennet </h5>
+                <p class="card-text">
+                    Dünya edebiyatının en büyük başyapıtlarından biri olan İlahi Komedya üç bölümden oluşur: Cehennem, Araf ve Cennet. Dante Alighieri,
+                    hiçbir zaman sevgili Floransa’sına dönemediği o meşum sürgün yıllarında yazdığı ve öteki dünyaya yaptığı düşsel geziyi anlattığı bu eserinde genç yaşında
+                    kaybettiği biricik aşkı Beatrice’sini ararken, bir yandan tanrısal düzenin gizlerini, bir yandan da antik çağların ezoterik sırlarını çözmeye çalışır.
+                    Elinizdeki kitap, Dante’nin Cennet’e yaptığı yolculuğun öyküsüdür.
+                </p>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><b>Yazar:</b> Dante Alighieri</li>
 
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺39,00 </a>
-                <a href="#" class="card-link">Sepete Ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺39,00 </a>
+                <a href="/Sepet" class="card-link">Sepete Ekle</a>
             </div>
         </div>
         <span><br /></span>
         <div class="card" style="width: 17rem;">
-            <img src="~/img/img8.jpg"class="card-img-top" alt="Dedemin Bakkalı">
+            <img src="~/img/img8.jpg" class="card-img-top" alt="Dedemin Bakkalı">
             <div class="card-body">
-                <h5 class="card-title">Dedemin Bakkalı</h5>
+                <h5 class="name">Dedemin Bakkalı</h5>
                 <p class="card-text">
                     Şermin Çarkacı’nın kendi hatıralarından ilhamla kaleme aldığı Dedemin Bakkalı, büyüklere çocukların gözünden kendilerini görme
                     imkânı verirken; küçüklere ticaretin, yenilikçi düşünmenin, büyüklerin dünyasının ve insan ilişkilerine dair inceliklerin ipuçlarını veriyor. Epey güldürüyor, biraz hüzünlendiriyor, uzun uzun düşündürüyor.
@@ -187,8 +197,8 @@
                 <li class="list-group-item"><b>Yazar:</b> Şermin Yaşar</li>
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺74,90 </a>
-                <a href="#" class="card-link">Sepete Ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price>₺74,90 </a>
+                <a href="/Sepet" class="card-link">Sepete Ekle</a>
             </div>
         </div>
     </div>
@@ -198,7 +208,7 @@
         <div class="card" style="width: 17rem;">
             <img src="~/img/img9.png" class="card-img-top" alt="Çantamdan Fil Çıktı">
             <div class="card-body">
-                <h5 class="card-title">Çantamdan Fil Çıktı</h5>
+                <h5 class="name">Çantamdan Fil Çıktı</h5>
                 <p class="card-text">
                     Çantamdan Fil Çıktı, oyun oynamak ve hayal gücüyle kendini keşfetmek isteyen herkesi büyüleyici dünyasına davet ediyor.
                     Peki, oyun oynamak için senin çantandan ne çıktı?
@@ -210,39 +220,39 @@
 
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺27,89 </a>
-                <a href="#" class="card-link">Sepete Ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺27,89 </a>
+                <a href="/Sepet" class="card-link">Sepete Ekle</a>
             </div>
         </div>
         <span><br /></span>
         <div class="card" style="width: 17rem;">
             <img src="~/img/img10.png" class="card-img-top" alt="Delifişek">
-            <div class="card-body">    
-                <h5 class="card-title">Delifişek</h5>
-                    <p class="card-text">
-                        Brezilyalı Jose Mauro de Vasconcelos'un, kendi yaşam kesitlerinden yola çıkarak yazdığı Şeker Portakalı'nı Türkiye'de yediden yetmişe herkes severek okuyor.
-                        Romanın kahramanı küçük Zeze, çocukların en yakın dostu; büyüklerin de yüreklerine yerleşmiş bir sevgili çocuk. Şeker Portakalı'nın devamı ve 
-                        ikinci bölümü olan Güneşi Uyandıralım'daki Zeze biraz daha büyümüş, artık okullu olmuştur. Küçüklüğündeki sevgili dostu, dert ortağı Şeker 
-                        Portakalı fidanı yoktur, ama bu kez yüreğinde sevimli Kurbağa'sı vardır. Bu dizinin üçüncü bölümü olan Delifişek'te Zeze'yi daha da büyümüş bulacaksınız.
-                        Zeze artık delikanlı olma yolundadır. Yaşamın katı gerçekleriyle karşı karşıyadır. 
-                        Haklarını aramakta, özgürlüğü yaratmaya çalışmaktadır.
-                    </p>
-                </div>
-           
+            <div class="card-body">
+                <h5 class="name">Delifişek</h5>
+                <p class="card-text">
+                    Brezilyalı Jose Mauro de Vasconcelos'un, kendi yaşam kesitlerinden yola çıkarak yazdığı Şeker Portakalı'nı Türkiye'de yediden yetmişe herkes severek okuyor.
+                    Romanın kahramanı küçük Zeze, çocukların en yakın dostu; büyüklerin de yüreklerine yerleşmiş bir sevgili çocuk. Şeker Portakalı'nın devamı ve
+                    ikinci bölümü olan Güneşi Uyandıralım'daki Zeze biraz daha büyümüş, artık okullu olmuştur. Küçüklüğündeki sevgili dostu, dert ortağı Şeker
+                    Portakalı fidanı yoktur, ama bu kez yüreğinde sevimli Kurbağa'sı vardır. Bu dizinin üçüncü bölümü olan Delifişek'te Zeze'yi daha da büyümüş bulacaksınız.
+                    Zeze artık delikanlı olma yolundadır. Yaşamın katı gerçekleriyle karşı karşıyadır.
+                    Haklarını aramakta, özgürlüğü yaratmaya çalışmaktadır.
+                </p>
+            </div>
+
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><b>Yazar:</b> Jose Mauro De Vasconcelos</li>
 
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺40,95 </a>
-                <a href="#" class="card-link">Sepete Ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺40,95 </a>
+                <a href="/Sepet" class="card-link">Sepete Ekle</a>
             </div>
         </div>
         <span><br /></span>
         <div class="card" style="width: 17rem;">
             <img src="~/img/img11.png" class="card-img-top" alt="Kozmos Evrenin ve Yaşamın Sırları">
             <div class="card-body">
-                <h5 class="card-title">Kozmos Evrenin ve Yaşamın Sırları</h5>
+                <h5 class="name">Kozmos Evrenin ve Yaşamın Sırları</h5>
                 <p class="card-text">"Carl Sagan zamanımızın en parlak bilim adamlarından biridir... İçinde varlığımızı sürdürdüğümüz akıllara durgunluk veren Kozmos'un sonsuzluğunu dile getirirkenbilimingeçmişine, şimdiki zamanına ve geleceğine ilişkin muhteşem bir eser yaratmış."Associated Press"Alanında göz kamaştırıcı, önerilerinde kışkırtıcı. Bu kitabı okuyan herkesin, etkisi altında kalacağından hiç kuşkum yok." The Miami Herald"Sagan edebi bir coşkuyla yazıyor. Harika bir eser. İnsan aklının tüm noktalarına değinen Kozmos gerçek olmayacak kadar gerçek."The Cleveland Plain Dealer- İnsanoğlu uzay okyanusuna açılıyor- Canlıların ve evrenin yapısı- Doğa yasaları tüm evrende geçerlidir- Cennet ve cehennem- Başka gezegenlerde yaşam var mı?- Keşif yolculuklarının öyküsü- Samanyolu: Gecenin bel kemiği- Zaman ve mekan içinde yolculuk- Başka evrenlerin kapısı karadelikler- Sonsuzluğun kıyısı: Dördüncü boyut- Aklın evreni- Galaktik uygarlık- Yaşamak ya da yok olmak konusunda kim karara verecek?</p>
             </div>
             <ul class="list-group list-group-flush">
@@ -250,15 +260,15 @@
 
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺72,60 </a>
-                <a href="#" class="card-link">Sepete Ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺72,60 </a>
+                <a href="/Sepet" class="card-link">Sepete Ekle</a>
             </div>
         </div>
         <span><br /></span>
         <div class="card" style="width: 17rem;">
             <img src="~/img/img12.png" class="card-img-top" alt="Sofie'nin Dünyası">
             <div class="card-body">
-                <h5 class="card-title">Sofie'nin Dünyası <br /> Felsefe Tarihi Üzerine Bir Roman</h5>
+                <h5 class="name">Sofie'nin Dünyası <br /> Felsefe Tarihi Üzerine Bir Roman</h5>
                 <p class="card-text">
                     Benzer insanların", yüzeysel bilgilerin geçerli olduğu çağımızda, "3000 yıllık geçmişinin hesabını yapamayan insan günübirlik yaşayan insandır" diyen Goethe'nin günübirlik insanlarından olmama yolunda ciddi bir adım.
                     15. yaşgününü kutlamaya hazırlanan Sofi, bir gün posta kutusunda "Kimsin" yazılı bir not bulur. Bu sorudan hareketle, bütün bir felsefe tarihinde sorulmuş soruları ve cevapları, sürükleyici bir roman kurgusu içinde anlatan Jostein Gaarder, Umberto Eco'nun "Gülün Adı"nda Ortaçağ teolojisini romanlaştırma gücünü bu kitabında felsefede gösteriyor.
@@ -269,8 +279,8 @@
 
             </ul>
             <div class="card-body">
-                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="card-link">₺107,64 </a>
-                <a href="#" class="card-link">Sepete Ekle</a>
+                <a style="font-size:16px;font-weight:bolder; font-family:cursive" class="price">₺107,64 </a>
+                <a href="/Sepet" class="card-link">Sepete Ekle</a>
             </div>
         </div>
     </div>
